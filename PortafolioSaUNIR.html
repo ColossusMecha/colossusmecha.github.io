@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        nav {
+            background-color: #342aa5;
+            color: rgb(255, 255, 255);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            padding: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #content {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffffff;
+        }
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .blog-post h2 {
+            margin-top: 0;
+        }
+        .blog-post .date {
+            color: #999;
+            font-size: 0.9em;
+        }
+        .inicio-gif {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .large-heading {
+            font-size: 4em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" data-section="inicio">Inicio</a></li>
+            <li><a href="#" data-section="sobre-mi">Sobre Mí</a></li>
+            <li><a href="#" data-section="proyectos">Proyectos</a></li>
+            <li><a href="#" data-section="experiencia">Experiencia</a></li>
+            <li><a href="#" data-section="blog">Blog</a></li>
+            <li><a href="#" data-section="contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <section id="inicio">
+            <h1 class="large-heading">Bienvenido a Mi Portafolio Personal!</h1>
+            <p>Iba a ser ilustradora pero me lesioné emocionalmente c:</p>
+            <p>¡Ahora escribo código y soluciono problemas!</p>
+            <iframe src="https://giphy.com/embed/137EaR4vAOCn1S" width="680" height="471" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/funny-mama-hacker-137EaR4vAOCn1S">via GIPHY</a></p>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = {
+                'inicio': `
+                    <h1>Bienvenido a Mi Portafolio</h1>
+                    <p>Esta es la sección de inicio.</p>
+                    <p>En la parte superior encontrarás el menú de opciones del portafolio</p>
+                    <p> Por favor, tómate el tiempo de revisar mi trabajo y déjame un comentario a mi LinkedIn fijado en la sección "Contacto"</p>
+                    <iframe src="https://giphy.com/embed/xTcnT0BU0lnLSNKDOE" width="680" height="471" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/funny-mama-hacker-137EaR4vAOCn1S">via GIPHY</a></p>
+                `,
+                'sobre-mi': `
+                    <h1>Sobre Mí</h1>
+                    <img src="https://media.licdn.com/dms/image/D5603AQH1FBkszH-NuA/profile-displayphoto-shrink_400_400/0/1684817826617?e=1723075200&v=beta&t=VZpQiqEj-p_RPXqul6W9D2hVKMVD1qXkPoENzCyA2As " alt="Descripción de la imagen">
+                    <p>Me llamo Sarah. Tengo 22 años y soy estudiante de Ingeniería Informática</p>
+                    <p> Tengo 3 certíficados de JavaScript con Google y realicé cursos en áreas como astrofísica y astroquímica.</p>
+                    <p> Tengo dos diplomados en Diseño Gráfico y desde 2019 trabajo como ilustradora y diseñadora gráfica freelance para diferentes empresas y clientes.</p>
+                    <p> En cuanto a la programación. Tengo habilidades en JS y Python principalmente. Además, gracias a la universidad he tenido la oportunidad de utilizar otros lenguajes como R, Java, C y C+</p>
+                    <p> Soy una persona orientada a la resolución de problemas, por eso me gusta la programación. También tengo nivel de Inglés C1 y actualmente me encuentro aprendiendo noruego en mis tiempos libres.</p>
+                `,
+
+                    
+                'proyectos': '<h1>Proyectos</h1><p>Estos son algunos de mis proyectos.</p>',
+                'experiencia': `
+                    <h1>Experiencia</h1>
+                    <p>3+ años de experiencia como docente de diseño y artes plásticas.</p>
+                    <p>5+ años de experiencia como diseñadora e ilustradora para clientes privados.</p>
+                    <p>En 2024 comencé a trabajar para la empresa Kodland como Tutor de Desarrollo de Videojuegos en Roblox Studio.</p>
+                    
+                `,
+                                
+                'blog': `
+                    <h1>Blog</h1>
+                    <div class="blog-post">
+                        <h2>Mi Primer Entrada de Blog</h2>
+                        <p class="date">27 de mayo de 2024</p>
+                        <p>¡Bienvenido a mi blog! Esta es mi primera entrada donde hablaré sobre mi viaje en el mundo del desarrollo web. Espero que encuentres mis experiencias y proyectos interesantes. ¡Gracias por leer!</p>
+                        <p> En el año 2021 inicié la carrera de Ingeniería Informática en UNIR. Ha sido una experiencia retadora hasta el momento y he crecido mucho desde entonces.</p>
+                        </div>
+                    <div class="blog-post">
+                        <h2>¿Crear una página web?</h2>
+                        <p class="date">1 de junio de 2024</p>
+                        <p>Aquí puedes ver mi segunda entrada del blog. Escribir es un proceso interesante y las herramientas digitales de la programación son intuitivas y complejas al mismo tiempo.</p>
+                        <p>A veces puede ser difícil crear una página web. Sin embargo, internet posee infinidad de recursos para facilitar la tarea. Por ejemplo, en el foro de la asignatura hay una página que nos permite aprender muchas cosas sobre diseño web.</p>
+                        </div>
+                    <div class="blog-post">
+                        <h2>La elegancia está en la sencillez</h2>
+                        <p class="date">1 de junio de 2024</p>
+                        <p>Elegí usar un diseño web minimalista por múltiples razones. La primera porque era más sencillo programar una página responsiva con un diseño simple y bien logrado a crear una página repleta de elementos visuales interesantes pero inútiles. También, porque me permitió practicar las bases del desarrollo web con los conocimientos que tenía y los recursos digitales facilmente.</p>
+                    </div>
+                `,
+                'contacto': '<h1>Contacto</h1><p>Puedes contactarme a través de este <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">formulario</a>.</p>' +
+                            '<p>Te dejo mi perfíl de LinkedIn donde encontrarás <a href="https://www.linkedin.com/in/sarah-s-50552a209/" target="_blank">mi contacto profesional</a>.</p>'
+            };
+
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const section = event.target.getAttribute('data-section');
+                    document.getElementById('content').innerHTML = sections[section];
+                });
+            });
+        });
+    </script>
+</body>
+</html>
